@@ -1,0 +1,441 @@
+:root {
+    --light-gray: #cfcfcf71;
+    --light-lightblue: #dce6f665;
+    --pink: #253e0c;
+    --active-link-border-radius: 15px;
+    --active-link-box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+  }
+  .pt-sec{
+    padding-top: 50px;
+  }
+  @import url('https://fonts.cdnfonts.com/css/iranyekan');
+
+  @font-face {
+    font-family: 'iransans';
+    src:    url('fonts/iransans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: auto;
+  }
+
+/* @font-face {
+    font-family: yekanBakh;
+    src: url(../font/fonnts.com-YekanBakh-Bold.ttf);
+    src: url(../font/fonnts.com-YekanBakh-Regular.ttf);
+  } */
+
+  
+body{
+     font-family:iransans!important;
+     /* background-color:rgba(0, 0, 0, 0.985); */
+}
+
+/* start navBar */
+  .bg-navBar{
+    position:fixed !important;
+    background-color:rgba(0, 0, 0, 0.419);
+    left: 0;
+    /* backdrop-filter: blur(16px) saturate(120%); */
+    height: 80px;
+    z-index: 1000;
+  }
+    /* img logo */
+    .img-logo{
+        width: 100px;
+        
+      }
+    /* end logo */
+
+    /* menu */
+      .btn-humberger{
+        /* position: absolute;*/
+        top: -90px;
+        left: 0;
+        width: 45px; 
+   }
+    /* .menu-in-navBar{
+        width: 500px;  
+    }    */
+    .navbar-toggler{
+      background-color:rgb(240, 230, 230) !important;
+    } 
+    .body-humbergerMenu{
+      width:70% !important;
+      height: 680px;
+      z-index: 1000;
+
+    }
+    .offcanvas-body{
+      border-top:10px solid rgb(38, 38, 38);
+    }
+    .bg-humbegerMenu{
+      position: absolute;
+      width: 300px;
+      right: 15%;
+      top: 17%;
+    }
+    .li-body-humbergerMenu {
+      list-style-type: none; 
+      transition:all 0.5s ease-in-out; 
+      z-index: 1000;
+    }
+    .li-body-humbergerMenu:hover {
+        
+        background-color:rgba(20, 130, 233, 0.458);
+        border-radius:7px;
+      transform: translateX(-10px);
+    }
+    .li-body-humbergerMenu:hover .bg-humbegerMenu{
+      transform: scaleX(1px);
+  }
+    .li-body-humbergerMenu a{   
+      list-style-type: none; 
+      color:rgb(24, 24, 24) !important;;
+    }
+      .menu {
+        list-style: none;
+        position: relative;
+        display: inline-flex;
+        padding: 10px;
+      }
+      
+      .menu::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transform: translateX(var(--transformJS));
+        width: var(--widthJS);
+        height: calc(100% - 20px);
+        border-radius: var(--active-link-border-radius);
+        background: var(--light-lightblue);
+        box-shadow: var(--active-link-box-shadow);
+        transition: all 0.3s linear;
+        border: 1px solid rgba(51, 60, 109, 0.263);
+      }
+      .menu li{
+        padding-left: 15px !important;
+
+      }
+      .menu li a{
+        display: inline-block;
+        position: relative;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        z-index: 1;
+        color: rgb(247, 247, 247) !important;
+      }
+      
+      .menu li:not(:last-child) {
+        margin-right: 20px;
+      }
+      
+      @media (max-width: 800px) {
+        .menu,
+        .menu li {
+          display: inline-block;
+        }
+      
+        .menu::before {
+          display: none;
+        }
+      }
+      /* end menu */
+      /* start 3d */
+    
+      
+      #manual{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      /* cube */
+      .cube {
+        position: absolute;
+        top: 170%;
+        left: 0;
+        margin-top: -120px;
+        width: 150px;
+        height: 50px;
+        line-height: 150px;
+        /* text-align:center; */
+        transform-style: preserve-3d;
+        transform: translateZ(-100px);
+        transition: transform 1s;
+      }
+      .gym-name{
+        position: absolute;
+        top: -105%;
+        font-size:26px;
+        color:rgba(97, 140, 170, 0.621);
+      }
+      
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #151515;
+        background-position: 0 100%;
+        background-size: 100% 400%;
+        backface-visibility: hidden;
+        transition: background-position 1s;
+        font-size: 600%;
+        border: 1px solid rgba(233, 233, 233, 0.151);
+        border-radius:5px;
+      }
+      
+      /* transform the faces and use a big grad for shading */
+      
+      .face:first-child {
+        transform: rotateX(90deg) translateY(50%) rotateX(-90deg);
+        background-image: linear-gradient(rgba(244, 244, 244, 0.771) 10%, rgba(239, 239, 239, 0.136) 66%);
+      }
+      .face:last-child {
+        transform: translateY(50%) rotateX(-90deg) ;
+        background-image: linear-gradient(rgba(230, 230, 230, 0.41) 33%, rgba(243, 243, 243, 0.3) 90%);
+      }
+      
+      
+      /* some test candidates */
+      
+   
+       .face span{
+        font-size: 26px;
+        color:rgba(35, 35, 35, 0.77);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }  
+       #gym {
+        left: 10%;
+      }
+      
+      
+      /* use the checkbox to toggle manual / autoplay */
+      
+      /* auto-play */
+      #manual:not(:checked) ~ .cube {
+        animation: rotate 2s alternate infinite ease-in-out;
+      }
+      #manual:not(:checked) ~ .cube .face {
+        animation: shade 3s alternate infinite ease-in-out;
+      }
+      @keyframes rotate {
+        to { transform: translateZ(-10px) rotateX(10deg); }
+      }
+      @keyframes shade {
+        to { background-position: 0 0 }
+      }
+        
+      
+      /* end 3d */
+
+
+/* end navBar */
+
+/* start showcase  */
+/* .scroll{
+  overflow-x:hidden;
+} */
+
+ .showCase{ 
+  width: 600px; 
+  height: 180px;
+  box-shadow:10px 10px 10px rgba(195, 195, 195, 0.663);
+  background:#e8e8e84b;
+  border:1px solid rgb(255, 255, 255);
+  border-radius:30px;
+  }
+
+ .showCase li p{  font-size: 17px;
+  color: rgba(90, 90, 90, 0.941);
+  font-weight: bold !important;
+  text-decoration: none !important;
+  padding: 20px 0px;
+  font-size: 16px;
+
+}
+.option-btn img{
+width: 50px;
+height: 50px;
+}
+.title-showcase-descreptor{
+  padding: 10px;
+}
+.title-showcase-descreptor h2{
+  font-size:22px ;
+  font-weight: bold !important;
+  color:rgb(37, 114, 228);
+  padding-bottom: 50px;
+}
+.title-showcase-descreptor p{
+  font-size:18px;
+  line-height: 30px;
+  color:rgba(47, 47, 47, 0.77);
+}
+.option-btn{
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.noFilter{
+  transform: translateY(-5px);
+  filter: none;
+}
+
+.img-showCase:hover{
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+/* end showCase */
+
+/* start parallax */
+
+.parallax {
+  position: relative;
+  /* The image used */
+  background-image: url('../img/bg-section-x.jpg');
+  /* Full height */
+  height: 50%; 
+  overflow:hidden;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-content {
+  padding: 0px 50px;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  scroll-behavior: smooth;
+  background-color:white;
+  border-radius:0 40px 0 40px;
+  border:1px solid rgba(38, 38, 38, 0.404);
+  box-shadow:10px 10px 10px 10px rgba(60, 60, 60, 0.244);
+  left: -100%; /* عنصر را 100% از سمت چپ صفحه خارج کنید */
+  top: 50%; /* عنصر را در 50% ارتفاع صفحه قرار دهید */
+  transform: translateY(-50%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.h-300{
+  height: 300px;
+}
+.parallax-content p{
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(52, 52, 52, 0.756);  
+  position: absolute;
+  }
+.element1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left:-10px;
+  top:-50px;
+  opacity: 1;
+  border-radius:50%;
+  background-color:rgba(206, 206, 255, 0.344);
+  /* transform: translateX(200%); */
+  z-index: 1000;
+}
+.element2 {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top: 80px;
+  right:10px;
+  opacity: 1;
+  /* transform: translateX(-100%); */
+  border-radius:50%;
+  background-color:rgba(206, 206, 255, 0.344);
+  z-index: 1000;
+}
+/* end parallax */
+
+
+/* start section-coach */
+.bg-black{
+  position: relative;
+  align-items: center;
+  height: 700px !important;
+ background-color:rgba(0, 0, 0, 0.985);
+}
+.container-coach{
+  border-radius:25px;
+  height: 500px;
+  padding: 50px;
+  background-color:rgb(255, 255, 255);
+}
+.section-coach{
+  /* overflow: hidden; */
+}
+.img-coach{
+  border-radius:15px;
+  width: 250px;
+}
+.h{
+  height: 500px;
+}
+.introducing-coach{
+  align-items:center;
+  padding:10px 30px;
+  line-height: 40px;
+  border-radius: 15px;
+  width: 150px;
+  height: 200px;
+  color:rgb(249, 249, 249);
+  background-color:rgb(71, 67, 126);
+  display: block;
+  position:absolute;
+  top:100px;
+  right: 18%;
+  animation: fadeInUp;
+}
+.coach h1{
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.coach p{
+  
+}
+.btn-register{
+  background-color:rgb(12, 190, 9);
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  color:rgb(245, 245, 245);
+  bottom:10%;
+  position: absolute;
+  left: 20%;
+  
+}
+.color-btn{
+  color:black !important;;
+}
+
+/* end section-coach */
+
+  
