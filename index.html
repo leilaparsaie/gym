@@ -7,6 +7,10 @@
     <title>Document</title> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous"></head>
     <link href="https://fonts.cdnfonts.com/css/iranyekan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <body font-family="">
@@ -23,7 +27,9 @@
                               <div class="container-fluid">
                                 <a class="navbar-brand" href="#"></a>
                                 <button class="navbar-toggler border-0 btn-humberger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                  <span class="navbar-toggler-icon"></span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="35" viewBox="-10 3 1 30">
+                                    <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
+                                    </svg>
                                 </button>
                                 <!--start humberger menu body  -->
                                 <div class="offcanvas offcanvas-start body-humbergerMenu " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -36,10 +42,7 @@
                                       <li class="li-body-humbergerMenu"> 
                                      <a class="nav-link " aria-current="page" href="#">خانه</a>
                                       </li>
-                                      <li class="li-body-humbergerMenu">
-                                        <a class="nav-link" href="#">دوره ها</a>
-                                      </li>
-                                      <li class="li-body-humbergerMenu">
+                                        <li class="li-body-humbergerMenu">
                                         <a class="nav-link" href="#">گالری</a>
                                       </li>
                                       <li class="li-body-humbergerMenu">
@@ -59,9 +62,6 @@
                             <ul class="navbar-nav menu ">
                               <li class="nav-item active">
                                 <a class="nav-link " aria-current="page" href="#">خانه</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">دوره ها</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">گالری</a>
@@ -85,10 +85,31 @@
                          </div>
                         </div> 
                       </nav> 
-                      <img src="assets/img/bg-img (1).jpg" class="m-0 p-0">
                  
       </div>   
     </div>
+    <header class="container-fluid mb-0">
+      <div class="row">
+        <div class="col-12 p-0">
+          <figure class="">
+            <div class="overlay">
+              <div class="heder-title">
+                <p class="">مجهز به بهترین دستگاه ها</p>
+                <p class="">
+                  برگزار کننده دوره های حرفه ای
+                </p>
+                <button type="button" class="btn btn-login bg-success">
+                  <a href="#" id="" class="">ثبت نام </a> 
+                </button>
+              </div>
+            </div>
+            <img src="assets/img/bg-img (1).jpg" class="img-heder img-fluid m-0 p-0">
+            <!-- <img src="assets/img/title-logo-.png" class="title-logo"> -->
+
+          </figure>
+        </div>
+      </div>
+    </header>
     <!-- end navBar -->
 
     
@@ -237,15 +258,89 @@
     </div>
     <!-- end section coach -->
 
-    <!-- footer -->
-     <div class="container-fluid mt-3 mt-lg-5">
+    <!-- start footer -->
+    <div class="container-fluid bg-white mt-100 p-5">
       <div class="row">
-        <div class="col-12 col-lg-7">
-          
+        <div class="container p-4">
+          <div class="row d-flex justify-content-center pt-4 m-t shadow">
+            <div class="col-sm-12 col-md-3 title-footer d-flex flex-column justify-content-center mb-4 p-1 ">
+              <h6>عضویت در خبرنامه</h6>
+              <a href="#" class="text-decoration-none">با عضویت از<span class="text-danger"> 30% تخفیف</span> بهره مند شوید</a>
+            </div>
+            <div class="col-sm-12 col-md-4 title-footer d-flex flex-column justify-content-center mb-4 p-1 ">
+              <h6>ویژه ی مشترکین</h6>
+              <a href="#" class="text-decoration-none">به <span class="text-success"> یک میلیون</span> مشترک ما بپیوندید.و از تخفیفات مشترکین خبرنامه ما بهره مند شوید.</a>
+            </div>
+            <div class="col-sm-12 col-md-5 d-flex align-items-baseline">
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control Subscription-input" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="آدرس ایمیل خود را وارد کنید..." >
+                <div class="input-group-append Subscription">
+                  <button class="btn btn-danger" type="button">اشتراک</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid about-us mt-4">
+          <div class="row">
+            <div class="col-6 col-md-3 customer-services ">
+              <h5>خدمات</h5>
+             <div class="customm-dropdown-menu">
+              <ul class="dropdown flex-column">
+                <li><a class="dropdown-item " href="#">
+                  <span class="material-symbols-outlined">
+                  </span>نحوه عضویت</a></li>
+                <li><a class="dropdown-item " href="#">
+                  <span class="material-symbols-outlined">
+                  </span>تماس با مشاور </a></li>
+               
+                </ul>
+             </div>
+            </div>
+            <div class="col-6 col-md-3 customer-services">
+              <h5>ارتباط با ما</h5>
+              <div class="tell">
+                <span class="material-symbols-outlined text-white">
+                  phone
+                  </span>   
+                  <p>امور مشترکین :</p>       
+                  <h6 class="pl-2"><a href="#" class="text-decoration-none">09170000000</a>
+                  </h6>
+                  <h6 class="pl-2"><a href="#" class="text-decoration-none">09120000000</a>  
+                  </h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 customer-services ">
+              <h5>پشتیبانی</h5>
+              <span class="material-symbols-outlined text-white">
+                headphones
+                </span>
+                <p>پاسخگویی 24 ساعته</p>
+                <div class="tell">
+                  <span class="material-symbols-outlined text-white">
+                    phone
+                    </span>   
+                    <p>ارتباط با پشتیبانی :</p>       
+                    <h6 class="pl-2"><a href="#" class="text-decoration-none">09170000000</a>
+                    </h6>
+                    <h6 class="pl-2"><a href="#" class="text-decoration-none">09120000000</a>  
+                    </h6>
+                  </div>
+            </div>
+            <div class="col-6 col-md-3 customer-services ">
+               <h5>شبکه های اجتماعی :</h5>
+               <span class="material-symbols-outlined text-white ">mail</span><p > webdesing@gmail.com</p>
+               <span class="material-symbols-outlined text-white ">call</span ><p> 09171236543</p>
+               <p class="">آدرس : شیراز-خیابان ملاصدرا- کوچه 111</p>
+              <!-- <div class="bg-danger">
+                <a class="" href="#"><i class="far fa-user"></i></a>
+              </div>  -->
+              </div>
+          </div>
         </div>
       </div>
-     </div>
-     <!-- end footer -->
+    </div>
+  <!-- end footer -->
 
 
      
