@@ -1,6 +1,6 @@
 @import url(../css/-footer-section-style.css);
 @import url(../css/heder.css);
-
+@import url(../css/RegisterAndLogIn.css);
 :root {
     --light-gray: #cfcfcf71;
     --light-lightblue: #dce6f665;
@@ -416,7 +416,8 @@ height: 50px;
 }
 .img-coach{
   border-radius:15px;
-  width: 250px;
+  width: 280px;
+  height: 350px;
 }
 .h{
   height: 500px;
@@ -424,7 +425,7 @@ height: 50px;
 .introducing-coach{
   align-items:center;
   padding:10px 30px;
-  line-height: 40px;
+  line-height: 30px;
   border-radius: 15px;
   width: 150px;
   height: 200px;
@@ -432,8 +433,8 @@ height: 50px;
   background-color:rgb(71, 67, 126);
   display: block;
   position:absolute;
-  top:100px;
-  right: 18%;
+  top:120px;
+  right: 20%;
   animation: fadeInUp;
 }
 .coach h1{

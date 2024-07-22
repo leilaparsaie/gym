@@ -1,0 +1,94 @@
+
+.container-login{
+    position: absolute;
+    background-color:rgba(231, 231, 231, 0.316);
+    width:100%;
+    height:100vh;
+    top: 0;
+    z-index:1200;
+}
+
+.container-form{
+  position: relative;
+  width: 1000px;
+  height: 500px;  
+  margin: 0 auto;
+  top: 20%!important;
+  background-color:rgb(255, 255, 255);
+ 
+}
+.register{
+   height: 100%;
+}
+.logo-register{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+.title-form{
+    position: relative;
+    margin: 0 auto;
+    width:150px;
+    border-bottom: 4px solid rgb(225, 225, 225) ;
+    padding-bottom: 0px;
+}
+.title-form span{
+    margin-left: 40px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+.borderbottom {
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    top:35px;
+    left:0;
+    background-color: black;
+}
+.form{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+.form input{
+    border: none;
+    background-color:rgb(248, 248, 248);
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+.form input:valid {
+    border-color: green;
+  }
+  
+ .form input:invalid {
+    border-color: red;
+  }
+  
+.btn-login{
+    width: 100%;
+    outline: none!important;
+    background-color:rgb(186, 186, 186);
+}
+.btnRegister{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(3, 194, 3, 0.919);
+    display: block;
+    left: 0;
+    
+}
+.forgotPass{
+    text-decoration: none;
+    font-size: 12px;
+}
+.img-form-logIn{
+    width: 100%;
+    height: 100%;
+}
+.error {
+    color: red;
+    font-size: 12px;
+  }

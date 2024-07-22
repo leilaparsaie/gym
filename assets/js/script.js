@@ -1,3 +1,5 @@
+  
+
 // start menu
     const menu = document.querySelector(".menu");
     const menuLinks = menu.querySelectorAll("a");
@@ -124,4 +126,33 @@ optionBtns.forEach(btn => {
 // end showcase
 
 
-// coach
+// login form
+
+  // link to login and register
+    const loginbtn = document.querySelector('#login');
+    const registerbtn = document.querySelector('#register');
+    const borderbottom = document.querySelector('.borderbottom');
+
+    registerbtn.addEventListener('click', () => {
+      borderbottom.style.right = '0px';
+    
+    });
+    loginbtn.addEventListener('click', () => {
+      borderbottom.style.left = '0px';
+    
+    });
+
+
+  // confirm_password
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm_password');
+    const errorMessage = document.querySelector('.error');
+    const btnRegister = document.querySelector('.btnRegister');
+
+    btnRegister.addEventListener('click', () => {
+      if (confirmPasswordInput.value !== passwordInput.value) {
+        errorMessage.textContent = 'رمزهای عبور مطابقت ندارند';
+      } else {
+        errorMessage.textContent = '';
+      }
+    });

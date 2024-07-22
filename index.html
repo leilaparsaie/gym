@@ -105,14 +105,49 @@
             </div>
             <img src="assets/img/bg-img (1).jpg" class="img-heder img-fluid m-0 p-0">
             <!-- <img src="assets/img/title-logo-.png" class="title-logo"> -->
-
           </figure>
         </div>
       </div>
     </header>
+    <!-- start Register and log in form -->
+     <div class="container-fluid container-login">
+      <div class="container d-flex">
+        <div class="row container-form">
+          <form class="col-md-6 col-lg-6 col-12 my-form register d-flex flex-column ">
+            <img src="./assets/img/logo.png.png" class="logo-register img-fluid">
+            
+            <div class="title-form mb-4 d-flex justify-content-center">
+              <span class="" id="register">ثبت نام</span>
+              <span class="" id="login">ورود</span>
+              <p class="borderbottom"></p>
+            </div>
+
+            <div class="form register-form">
+              <input type="text" placeholder="نام کاربری :">        
+              <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="کلمه عبور :">
+              <input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder=" تکرار کلمه عبور :">
+              <p class="error p-1"></p>
+              <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
+            </div>
+
+            <!-- <div class="form login-form d-flex flex-column">
+              <input type="text" placeholder="نام کاربری :">        
+              <input type="password" placeholder="کلمه عبور :">
+              <a href="#" class="forgotPass">فراموشی رمز عبور</a>
+              <button type="Login" class="btn btn-login">ورود</button>
+            </div> -->
+           
+          </form>
+          <div class="col-6 d-none d-md-block">
+            <img src="./assets/img/login.gif" class="img-form-logIn img-fluid">
+          </div>
+        </div>
+      </div>
+     </div>
+     <!-- end Register and log in form -->
+
     <!-- end navBar -->
 
-    
     <!-- start parallax -->
     <div class="parallax" id="parallax">
       <div class="container">
@@ -132,10 +167,7 @@
         </div>
       </div>
     </div>
-
-   
      <!-- end parallax -->
-
 
     <!--start show case section -->
     <div class="container mt-3 mt-lg-5">
@@ -184,7 +216,7 @@
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
   <!-- item -->
-              <div class="carousel-item active">
+              <div class="carouse-item active">
                 <div class="d-flex flex-lg-row">
                 <div class="col-12 col-lg-6">
                   <img src="assets/img/coach1.png" alt="" class="img-coach img-fluid"> 
@@ -219,7 +251,13 @@
             <div class="d-flex flex-lg-row">
               <div class="col-12 col-lg-6">
                 <img src="assets/img/coach2.jpg" alt="" class="img-coach img-fluid"> 
-                
+                    <!-- cart -->
+                    <span class="introducing-coach">
+                      ملیکا دشتی<br>
+                      31 ساله <br>
+                      مربی فیتنس و بدنسازی 
+                     </span>
+                   <!-- cart -->
               </div>
               
               <div class="col-12 col-lg-6 d-flex p-5">
