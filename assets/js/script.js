@@ -128,17 +128,47 @@ optionBtns.forEach(btn => {
 
 // login form
 
+const RegisterJs = document.querySelector('#Register-js'); // Assuming correct ID
+const containerLogin = document.querySelector('.container-login'); // Assuming correct class
+
+RegisterJs.addEventListener('click', () => {
+  // Check if the animation is already running to prevent stacking
+  if (!containerLogin.classList.contains('animated')) {
+    containerLogin.classList.add('animated'); // Add animated class
+    setTimeout(() => {
+      containerLogin.style.transform = 'translateY(0px)'; // Apply transform after class addition
+    }, 0); // Set a small delay to ensure class is applied first
+  }
+});
+
   // link to login and register
     const loginbtn = document.querySelector('#login');
     const registerbtn = document.querySelector('#register');
     const borderbottom = document.querySelector('.borderbottom');
+    const loginForm = document.querySelector('.login-form');
+    const registerForm = document.querySelector('.register-form');
+    const contantForm = document.querySelector('.form');
+
 
     registerbtn.addEventListener('click', () => {
-      borderbottom.style.right = '0px';
-    
+      borderbottom.style.transform = 'translateX(40px)';
+      contantForm.innerHTML=`<div>
+              <input type="text" placeholder="نام کاربری :">        
+              <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="کلمه عبور :">
+              <input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder=" تکرار کلمه عبور :">
+              <p class="error p-1"></p>
+              <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
+            </div>`
     });
+
     loginbtn.addEventListener('click', () => {
-      borderbottom.style.left = '0px';
+      borderbottom.style.transform = 'translateX(-40px)';
+      contantForm.innerHTML=`<div>
+              <input type="text" placeholder="نام کاربری :">        
+              <input type="password" placeholder="کلمه عبور :">
+              <a href="#" class="forgotPass">فراموشی رمز عبور</a>
+              <button type="Login" class="btn btn-login">ورود</button>
+            </div>`
     
     });
 
@@ -151,7 +181,7 @@ optionBtns.forEach(btn => {
 
     btnRegister.addEventListener('click', () => {
       if (confirmPasswordInput.value !== passwordInput.value) {
-        errorMessage.textContent = 'رمزهای عبور مطابقت ندارند';
+        errorMessage.textContent = 'رمزعبور مطابقت ندارند';
       } else {
         errorMessage.textContent = '';
       }

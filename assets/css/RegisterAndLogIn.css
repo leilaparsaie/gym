@@ -6,6 +6,13 @@
     height:100vh;
     top: 0;
     z-index:1200;
+    transform: translateY(-1000px);
+    transition: transform 1s ease-in-out; /* Smooth transition */
+  
+}
+
+.container-login.animated {
+  transform: translateY(0); /* Animate to visible position */
 }
 
 .container-form{
@@ -15,7 +22,7 @@
   margin: 0 auto;
   top: 20%!important;
   background-color:rgb(255, 255, 255);
- 
+  transform: translateY(20%);
 }
 .register{
    height: 100%;
@@ -36,17 +43,21 @@
     margin-left: 40px;
     padding-bottom: 10px;
     margin: 0 auto;
+    cursor: pointer;
+
 }
 .borderbottom {
     width: 70px;
     height: 3px;
     position: absolute;
     top:35px;
-    left:0;
+    transform: translateX(40px);
     background-color: black;
+    transition: transform 1s ease-in-out; /* Smooth transition */
+
 }
 .form{
-    width: 350px;
+    max-width: 350px;
     margin: 0 auto;
     position: relative;
 }
@@ -71,14 +82,16 @@
     width: 100%;
     outline: none!important;
     background-color:rgb(186, 186, 186);
+    cursor: pointer!important;
+    color:rgb(242, 242, 242);
 }
 .btnRegister{
     position: absolute;
     width: 100%;
     background-color:rgba(3, 194, 3, 0.919);
     display: block;
-    left: 0;
-    
+    cursor: pointer!important;
+    color:rgb(242, 242, 242);
 }
 .forgotPass{
     text-decoration: none;
@@ -86,9 +99,16 @@
 }
 .img-form-logIn{
     width: 100%;
-    height: 100%;
+    height: 300px; 
 }
 .error {
     color: red;
     font-size: 12px;
   }
+ .forgotPass-form{
+    position: absolute;
+    margin: 0 auto;
+    top: 20%!important;
+    background-color:rgb(255, 255, 255);
+    /* transform: translateY(20%); */
+ }

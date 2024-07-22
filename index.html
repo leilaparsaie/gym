@@ -98,8 +98,8 @@
                 <p class="">
                   برگزار کننده دوره های حرفه ای
                 </p>
-                <button type="button" class="btn btn-login bg-success">
-                  <a href="#" id="" class="">ثبت نام </a> 
+                <button type="button" id="Register-js" class="btn btn-login bg-success">
+                  <a href="#" class="">ثبت نام </a> 
                 </button>
               </div>
             </div>
@@ -112,38 +112,51 @@
     <!-- start Register and log in form -->
      <div class="container-fluid container-login">
       <div class="container d-flex">
-        <div class="row container-form">
-          <form class="col-md-6 col-lg-6 col-12 my-form register d-flex flex-column ">
-            <img src="./assets/img/logo.png.png" class="logo-register img-fluid">
-            
-            <div class="title-form mb-4 d-flex justify-content-center">
-              <span class="" id="register">ثبت نام</span>
-              <span class="" id="login">ورود</span>
-              <p class="borderbottom"></p>
-            </div>
-
-            <div class="form register-form">
-              <input type="text" placeholder="نام کاربری :">        
-              <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="کلمه عبور :">
-              <input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder=" تکرار کلمه عبور :">
-              <p class="error p-1"></p>
-              <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
-            </div>
-
-            <!-- <div class="form login-form d-flex flex-column">
-              <input type="text" placeholder="نام کاربری :">        
-              <input type="password" placeholder="کلمه عبور :">
-              <a href="#" class="forgotPass">فراموشی رمز عبور</a>
-              <button type="Login" class="btn btn-login">ورود</button>
-            </div> -->
-           
-          </form>
-          <div class="col-6 d-none d-md-block">
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <div class="row container-form display-form">
+          <div class="col-md-6 col-lg-6 col-6">
+            <form class=" my-form register d-flex flex-column ">
+              <img src="./assets/img/logo.png.png" class="logo-register img-fluid">
+              
+              <div class="title-form mb-4 d-flex justify-content-center">
+                <span class="" id="register">ثبت نام</span>
+                <span class="" id="login">ورود</span>
+                <p class="borderbottom"></p>
+              </div>
+  
+              <div class="form">
+                <div class="register-form">
+                  <input type="text" placeholder="نام کاربری :">        
+                  <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="کلمه عبور :">
+                  <input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder=" تکرار کلمه عبور :">
+                  <p class="error p-1"></p>
+                  <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
+                </div>
+              </div>
+                       
+            </form>
+       
+          </div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
             <img src="./assets/img/login.gif" class="img-form-logIn img-fluid">
           </div>
         </div>
+         <!-- start forgot pass -->
+         <div class="row container-form d-none">
+            <form class="forgotPass-form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Enter your email address and we will send you a link to reset your password.</label>
+              <input type="email" class="form-control form-control-sm" placeholder="Enter your email address">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send password reset email</button>
+          </form>
+        </div>
+    
+       <!-- end forgot pass -->
       </div>
      </div>
+     
      <!-- end Register and log in form -->
 
     <!-- end navBar -->
