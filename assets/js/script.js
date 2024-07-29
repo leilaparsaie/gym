@@ -231,7 +231,14 @@ RegisterJs.addEventListener('click', () => {
          // end iconEye
 
         //  start forgotForm
-        
+        const forgotForm = document.getElementById('forgot-js');
+        const forgotFormEl = document.getElementById('forgotForm'); 
+        const formRegister = document.getElementById('formRegister-js'); 
+
+        forgotForm.addEventListener('click', function () {
+          forgotFormEl.style.display = 'block';
+          formRegister.style.display = 'none';
+        });
         // end forgotForm
 
     });
