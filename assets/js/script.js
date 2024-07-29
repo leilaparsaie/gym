@@ -159,30 +159,83 @@ RegisterJs.addEventListener('click', () => {
               <p class="error p-1"></p>
               <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
             </div>`
+  
     });
+      // confirm_password
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm_password');
+      const errorMessage = document.querySelector('.error');
+      const btnRegister = document.querySelector('.btnRegister');
+
+      btnRegister.addEventListener('click', () => {
+        if (confirmPasswordInput.value !== passwordInput.value) {
+          errorMessage.textContent = 'رمزعبور مطابقت ندارند';
+        } else {
+          errorMessage.textContent = '';
+        }
+  });
 
     loginbtn.addEventListener('click', () => {
       borderbottom.style.transform = 'translateX(-40px)';
-      contantForm.innerHTML=`<div>
+      contantForm.innerHTML=`<div class="password-field">
               <input type="text" placeholder="نام کاربری :">        
-              <input type="password" placeholder="کلمه عبور :">
-              <a href="#" class="forgotPass">فراموشی رمز عبور</a>
-              <button type="Login" class="btn btn-login">ورود</button>
+              <input type="password" class="active" id="passwordLogin" placeholder="کلمه عبور :">
+              <i id="iconEye" class="fa fa-eye-slash"></i>
+              <p class="error-pass p-1"></p>
+              <a href="#" id="forgot-js" class="forgotPass">فراموشی رمز عبور</a>
+              <button type="Login" class="btn btn-login btn-login-form">ورود</button>
             </div>`
+       // validatePassword
     
+            const passwordLogin = document.getElementById('passwordLogin');
+            const enteredPassword = passwordInput.value.toString();
+          
+            // backend*****
+            const correctPassword = "123456";
+          
+            // عنصر پیام خطا
+            const errorPassElement = document.querySelector('.error-pass');
+            const btnLogin = document.querySelector('.btn-login-form');
+          
+            btnLogin.addEventListener('click', () => {
+            if (enteredPassword !== correctPassword) {
+                errorPassElement.textContent = 'رمز عبور صحیح نیست';
+                // console.log("error");
+                // errorPassElement.style.display = 'block';
+            } else {
+              console.log("hello");
+                // اگر رمز عبور صحیح بود، عملیات ورود را انجام دهید
+                // ... کد مربوط به ورود موفق
+            }
+          });
+          
+          // end validatePassword
+
+        //start iconEye
+            const icon = document.getElementById('iconEye');
+
+            icon.addEventListener('click', function () {
+
+            if(passwordLogin.className == 'active') {
+                passwordLogin.setAttribute('type', 'text');
+                icon.className = 'fa fa-eye';
+              passwordLogin.className = '';
+
+            } else {
+                passwordLogin.setAttribute('type', 'password');
+                icon.className = 'fa fa-eye-slash';
+              passwordLogin.className = 'active';
+            }
+        
+            });
+         // end iconEye
+
+        //  start forgotForm
+        
+        // end forgotForm
+
     });
 
 
-  // confirm_password
-    const passwordInput = document.getElementById('password');
-    const confirmPasswordInput = document.getElementById('confirm_password');
-    const errorMessage = document.querySelector('.error');
-    const btnRegister = document.querySelector('.btnRegister');
+ 
 
-    btnRegister.addEventListener('click', () => {
-      if (confirmPasswordInput.value !== passwordInput.value) {
-        errorMessage.textContent = 'رمزعبور مطابقت ندارند';
-      } else {
-        errorMessage.textContent = '';
-      }
-    });

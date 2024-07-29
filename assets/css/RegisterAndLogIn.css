@@ -6,7 +6,7 @@
     height:100vh;
     top: 0;
     z-index:1200;
-    transform: translateY(-1000px);
+    /* transform: translateY(-1000px);ppp */
     transition: transform 1s ease-in-out; /* Smooth transition */
   
 }
@@ -101,9 +101,10 @@
     width: 100%;
     height: 300px; 
 }
-.error {
+.error,.error-pass{
     color: red;
     font-size: 12px;
+    font-weight: bold;
   }
  .forgotPass-form{
     position: absolute;
@@ -111,4 +112,12 @@
     top: 20%!important;
     background-color:rgb(255, 255, 255);
     /* transform: translateY(20%); */
+ }
+ #iconEye{
+    position: absolute;
+    left: 10px!important;
+    top: 62px!important;
+    padding: 5px!important;
+    transition: all 0.5s ease-in-out;
+    font-size: 12px!important;
  }
