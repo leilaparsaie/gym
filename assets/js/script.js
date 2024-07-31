@@ -137,6 +137,7 @@ RegisterJs.addEventListener('click', () => {
     containerLogin.classList.add('animated'); // Add animated class
     setTimeout(() => {
       containerLogin.style.transform = 'translateY(0px)'; // Apply transform after class addition
+      containerLogin.classList.remove('animated');
     }, 0); // Set a small delay to ensure class is applied first
   }
 });
@@ -243,6 +244,49 @@ RegisterJs.addEventListener('click', () => {
 
     });
 
+    // btn close
+     
+    const btnClose = document.querySelectorAll('.btn-close');
+    const formClose = document.querySelector('.container-login');
+    const forgotFormEl = document.getElementById('forgotForm'); 
+    const formRegister = document.getElementById('formRegister-js'); 
 
- 
+    btnClose.forEach(button => {
+        button.addEventListener('click', () => {
+          formClose.style.transform = 'translateY(-1000px)'; // یا هر روش دیگری برای مخفی کردن عنصر
+          forgotFormEl.style.display = 'none';
+          formRegister.style.display = 'flex';
+     
+        });
+      });
 
+
+// 
+// const btnClose = document.querySelectorAll('.btn-close');
+// const formClose = document.querySelector('.container-login');
+// const forgotFormEl = document.getElementById('forgotForm');
+// const formRegister = document.getElementById('formRegister-js');
+
+// let isFormVisible = false; // متغیری برای ردیابی وضعیت نمایش فرم
+
+// btnClose.forEach(button => {
+//   button.addEventListener('click', () => {
+//     if (isFormVisible) {
+//       formClose.style.transform = 'translateY(-1000px)';
+//       isFormVisible = false;
+//     } else {
+//       formClose.style.transform = 'translateY(0)';
+//       isFormVisible = true;
+//     }
+//   });
+// });
+
+// // برای مدیریت کلیک روی دکمه ثبت نام (فرض کنید یک رویداد کلیک برای آن تعریف شده است):
+// formRegister.addEventListener('click', () => {
+//   if (!isFormVisible) {
+//     formClose.style.transform = 'translateY(0)';
+//     isFormVisible = true;
+//   }
+// });
+
+// 

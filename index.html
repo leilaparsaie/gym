@@ -88,6 +88,10 @@
                  
       </div>   
     </div>
+     <div class="border-fixed"></div>
+    <div class="login-fixed">
+      <button class="btn">حساب کاربری من</button>
+    </div>
     <header class="container-fluid mb-0">
       <div class="row">
         <div class="col-12 p-0">
@@ -112,9 +116,9 @@
     <!-- start Register and log in form -->
      <div class="container-fluid container-login">
       <div class="container d-flex " >
-       <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
         <div class="row container-form display-form" id="formRegister-js">
           <div class="col-md-6 col-lg-6 col-6">
+            <button type="button" class="btn-close m-close" id="btn-close" aria-label="Close"></button>
             <form class=" my-form register d-flex flex-column ">
               <img src="./assets/img/logo.png.png" class="logo-register img-fluid">
               
@@ -145,14 +149,15 @@
       <!-- start forgot pass -->
         <div class="form-gap"></div>
         <div class="container" id="forgotForm">
+          <button type="button" class="btn-close m-close" id="btn-close" aria-label="Close"></button>
           <div class="row d-flex justify-content-center">
             <div class="col-md-4 col-md-offset-4 p-5">
                     <div class="panel panel-default">
                       <div class="panel-body">
                         <div class="text-center">
                           <h3><i class="fa fa-lock fa-4x"></i></h3>
-                          <h2 class="text-center">Forgot Password?</h2>
-                          <p>You can reset your password here.</p>
+                          <h2 class="text-center">فراموشی رمز عبور</h2>
+                          <p> لطفا شماره موبایلی که با آن وارد شدیده اید را وارد کنید </p>
                           <div class="panel-body">
             
                             <form id="register-form" role="form" autocomplete="off" class="form" method="post">
@@ -160,10 +165,10 @@
                               <div class="form-group">
                                 <div class="input-group">
                                   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                  <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                  <input id="email" name="email" placeholder="" class="form-control"  type="email">
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group ">
                                 <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
                               </div>
                               
@@ -180,7 +185,6 @@
     
        <!-- end forgot pass -->  
      </div>
-     
      <!-- end Register and log in form -->
 
     <!-- end navBar -->

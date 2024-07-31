@@ -6,7 +6,7 @@
     height:100vh;
     top: 0;
     z-index:1200;
-    /* transform: translateY(-1000px); */
+    transform: translateY(-1000px);
     transition: transform 1s ease-in-out; /* Smooth transition */
   
 }
@@ -125,7 +125,15 @@
  #forgotForm{
     display:none;
     margin-top: 10%;
-    background-color:rgb(255, 174, 174);
+    background-color:rgba(231, 231, 231, 0.655);
 
  }
+ .form-group input{
+    color:rgb(36, 36, 36);
+ }
+
 /* end forgotForm */
+/* btn close */
+.m-close{
+    margin: 10px;
+}
