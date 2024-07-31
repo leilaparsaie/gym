@@ -1,6 +1,8 @@
 @import url(../css/-footer-section-style.css);
 @import url(../css/heder.css);
 @import url(../css/RegisterAndLogIn.css);
+@import url(../css/about.css);
+
 :root {
     --light-gray: #cfcfcf71;
     --light-lightblue: #dce6f665;
@@ -340,8 +342,8 @@ height: 50px;
 }
 .parallax-content {
   padding: 0px 50px;
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 100px;
   position: absolute;
   scroll-behavior: smooth;
   background-color:white;
@@ -462,43 +464,33 @@ height: 50px;
 /* end section-coach */
 
   
-/* login-fixed */
+/* btn login-fixed */
  .login-fixed{
-  width: 96px;
-  height: 60px;
-  background-color:rgba(18, 240, 244, 0.512);
+  width:80px;
+  height: 35px;
+  background-color:rgb(247, 247, 247);
   position: fixed;
-  top:40%;
-  left: -1px;
-  border-radius:0px 10px 10px 0px;
-  z-index: 1100;
+  top:25%;
+  right:-5px;
+  border-radius:10px 0px 0px 10px;
+  z-index: 1200;
 }
 .login-fixed button{
   color:rgb(10, 2, 2);
+  font-size: 12px !important;
 }
-/*
-.border-fixed{
-  width: 100px;
-  height: 70px;
-  background-color:transparent;
-  position: fixed;
-  top:39.25%;
-  left: -3px;
-  border:4px solid rgba(176, 244, 18, 0.512);
-  border-radius:0px 10px 10px 0px;
-  z-index: 1100;
-  
-} */
+
 .border-fixed{
 	--angle: 0deg;
-  width: 100px;
-  height: 64px;
+  width: 88px;
+  height: 44px;
 	border: 5px solid;
   position: fixed;
-  top:40%;
-  left: -5px;
-  border-radius:0px 10px 10px 0px;
-	border-image: conic-gradient(from var(--angle), rgba(0, 187, 255, 0.619), yellow,aqua, rgba(255, 0, 255, 0.751)) 1;
+  top:24.5%;
+  right: -10px;
+  z-index: 1200;
+  border-radius:10px 0px 0px 10px;
+	border-image: conic-gradient(from var(--angle), rgba(0, 187, 255, 0.619), yellow,rgb(255, 191, 0), rgba(0, 251, 255, 0.751)) 1;
 	animation: 8s rotate linear infinite;
 }
 

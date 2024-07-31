@@ -13,13 +13,13 @@
     height: 100px;
 
 }
-.btn-login{
+.btn-login-heder{
     width: 100px;
     height: 40px;
     margin-top: 10px;
 
 }
-.btn-login a{
+.btn-login-heder a{
   text-decoration: none;
   color:white;
   font-size: 18px!important;
