@@ -134,23 +134,9 @@ font-family: "Font Awesome 5 Free";
 color: #44bce2;
 }
 
-.btn-style-one{
-position: relative;
-display: inline-block;
-font-size: 17px;
-line-height: 30px;
-color: #ffffff;
-padding: 10px 30px;
-font-weight: 600;
-overflow: hidden;
-letter-spacing: 0.02em;
-background-color: #00aeef;
-}
 
-.btn-style-one:hover{
-background-color: #0794c9;
-color: #ffffff;
-}
+
+
 .about-section{
 position: relative;
 padding: 120px 0 70px;
@@ -183,11 +169,15 @@ margin-bottom: 45px;
 }
 
 .about-section .btn-box{
-position: relative;
+    width: 100px;
+    height: 40px;
+  border-radius:  5px;
+  outline: nane;
+  border:nane;
 }
 
 .about-section .btn-box a{
-padding: 15px 50px;
+    color:white;
 }
 
 .about-section .image-column{
@@ -211,15 +201,16 @@ padding-left: 80px;
 padding-bottom: 0px;
 }
 .about-section .image-column .inner-column .author-desc{
-position: absolute;
-bottom: 16px;
-z-index: 1;
-background: orange;
-padding: 10px 15px;
-left: 96px;
-width: calc(100% - 152px);
-border-radius: 50px;
+    position: absolute;
+    bottom: -28px;
+    z-index: 1;
+    background: orange;
+    padding: 10px 15px;
+    left: 163px;
+    width: calc(100% - 152px);
+    border-radius: 50px;
 }
+
 .about-section .image-column .inner-column .author-desc h2{
 font-size: 21px;
 letter-spacing: 1px;
@@ -290,4 +281,8 @@ transition: all 300ms ease;
 
 .about-section .image-column .video-link .link:hover{
 background-color: #191e34;
-color: #f
+color: #fff;
+}
+.bg-whySec{
+background-image: url(../img/blurred-gym-machines.jpg);
+}

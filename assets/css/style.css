@@ -2,6 +2,8 @@
 @import url(../css/heder.css);
 @import url(../css/RegisterAndLogIn.css);
 @import url(../css/about.css);
+@import url(../css/contact\ us.css);
+
 
 :root {
     --light-gray: #cfcfcf71;
@@ -82,7 +84,7 @@ body{
     .body-humbergerMenu{
       width:70% !important;
       height:100%;
-      z-index: 11000;
+      z-index: 1100;
 
     }
     .offcanvas-body{
@@ -466,17 +468,17 @@ height: 50px;
   
 /* btn login-fixed */
  .login-fixed{
-  width:80px;
+  width:78px;
   height: 35px;
-  background-color:rgb(247, 247, 247);
+  background-color:rgb(7, 7, 7);
   position: fixed;
-  top:25%;
+  top:50%;
   right:-5px;
   border-radius:10px 0px 0px 10px;
   z-index: 1200;
 }
 .login-fixed button{
-  color:rgb(10, 2, 2);
+  color:rgb(245, 245, 245);
   font-size: 12px !important;
 }
 
@@ -486,12 +488,12 @@ height: 50px;
   height: 44px;
 	border: 5px solid;
   position: fixed;
-  top:24.5%;
+  top:49.25%;
   right: -10px;
   z-index: 1200;
-  border-radius:10px 0px 0px 10px;
 	border-image: conic-gradient(from var(--angle), rgba(0, 187, 255, 0.619), yellow,rgb(255, 191, 0), rgba(0, 251, 255, 0.751)) 1;
-	animation: 8s rotate linear infinite;
+  border-radius:20px 0px 0px 20px;
+  animation: 8s rotate linear infinite;
 }
 
 @keyframes rotate {

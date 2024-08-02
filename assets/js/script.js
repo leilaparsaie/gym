@@ -246,47 +246,95 @@ RegisterJs.addEventListener('click', () => {
 
     // btn close
      
-    const btnClose = document.querySelectorAll('.btn-close');
+    const btnClose = document.querySelector('.btn-close-login');
     const formClose = document.querySelector('.container-login');
     const forgotFormEl = document.getElementById('forgotForm'); 
     const formRegister = document.getElementById('formRegister-js'); 
 
-    btnClose.forEach(button => {
-        button.addEventListener('click', () => {
+    // 
+    btnClose.addEventListener('click', () => {
           formClose.style.transform = 'translateY(-1000px)'; // یا هر روش دیگری برای مخفی کردن عنصر
           forgotFormEl.style.display = 'none';
           formRegister.style.display = 'flex';
      
         });
+
+     const closeButton = document.querySelectorAll('#btn-close');
+      closeButton.forEach(button => {
+          button.addEventListener('click', () => {
+              // پیدا کردن عنصر والد نزدیک‌ترین با استفاده از کلاس
+              const parentElement = button.closest('.parent-class'); // جایگزین .parent-class با کلاس مورد نظر خود کنید
+
+              parentElement.style.transform = 'translateY(-1000px)' // برای مخفی کردن عنصر
+          });
       });
 
 
-// 
-// const btnClose = document.querySelectorAll('.btn-close');
-// const formClose = document.querySelector('.container-login');
-// const forgotFormEl = document.getElementById('forgotForm');
-// const formRegister = document.getElementById('formRegister-js');
+    // login-fixed
+    const loginFixed = document.querySelector('.login-fixed');
+    loginFixed.addEventListener('click', () => {
+      containerLogin.style.transform = 'translateY(0px)'; 
 
-// let isFormVisible = false; // متغیری برای ردیابی وضعیت نمایش فرم
+    });
+    // end login-fixed
 
-// btnClose.forEach(button => {
-//   button.addEventListener('click', () => {
-//     if (isFormVisible) {
-//       formClose.style.transform = 'translateY(-1000px)';
-//       isFormVisible = false;
-//     } else {
-//       formClose.style.transform = 'translateY(0)';
-//       isFormVisible = true;
+    // start contact form
+ 
+    // const toggleContact = document.querySelector('.toggle-contact'); 
+    // const containerContact = document.querySelector('.containerContact');
+    // const closeContact = document.querySelector('.close-contact'); 
+
+    // toggleContact.addEventListener('click', () =>{
+    //   containerContact.classList.add("active-contact");
+
+    // });
+    // closeContact.addEventListener('click', () =>{
+    //   containerContact.classList.remove("active-contact");
+    // });
+
+    const showContact = document.querySelector('.show-contact');
+    const btnContactjs = document.querySelectorAll('.btn-contact-js');
+
+    btnContactjs.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        // alert('Hello, world!');
+          const optionId = event.target.id;
+          showContact.innerHTML = '';
+          switch (optionId) {
+              case 'btn-insta':
+                  showContact.innerHTML = '@khashayar-gym';
+                  break;
+              case 'btn-tele':
+                  showContact.innerHTML = '@tel-khashayar_gym';
+                  break;
+              case 'btn-whats':
+                  showContact.innerHTML = '#09171223698';
+                  break; 
+              case 'btn-sms':
+                  showContact.innerHTML = '#09388547414';
+                  break;       
+            
+          }
+      });
+  });
+
+  const iconCalls = document.querySelectorAll('.call'); // توجه کنید که به جای singular به plural تغییر کرده است
+  const containerContact = document.querySelector('.containerContact');
+  
+  iconCalls.forEach(iconCall => { // با استفاده از forEach برای هر دکمه یک EventListener اضافه می کنیم
+      iconCall.addEventListener('click', () => {
+         
+          containerContact.style.transform = 'translateY(100px)';
+         
+      });
+  });
+//   document.addEventListener('click', (event) => {
+//     // بررسی اینکه آیا کلیک روی عنصر containerContact یا یکی از فرزندان آن نبوده است
+//     if (!event.target.closest('.containerContact')) {
+//         containerContact.style.transform = 'translateY(-1376px)'; // برگرداندن فرم به حالت اولیه
 //     }
-//   });
 // });
+  
+    // end contact form
 
-// // برای مدیریت کلیک روی دکمه ثبت نام (فرض کنید یک رویداد کلیک برای آن تعریف شده است):
-// formRegister.addEventListener('click', () => {
-//   if (!isFormVisible) {
-//     formClose.style.transform = 'translateY(0)';
-//     isFormVisible = true;
-//   }
-// });
-
-// 
+   

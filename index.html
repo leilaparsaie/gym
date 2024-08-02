@@ -45,7 +45,7 @@
                                         <li class="li-body-humbergerMenu">
                                         <a class="nav-link" href="#">گالری</a>
                                       </li>
-                                      <li class="li-body-humbergerMenu">
+                                      <li class="li-body-humbergerMenu call">
                                         <a class="nav-link " href="#">تماس با ما</a>
                                       </li>
                                       <li class="li-body-humbergerMenu">
@@ -66,7 +66,7 @@
                               <li class="nav-item">
                                 <a class="nav-link" href="#">گالری</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item call">
                                 <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">تماس با ما</a>
                               </li>
                               <li class="nav-item">
@@ -92,6 +92,48 @@
     <div class="login-fixed">
       <button class="btn">ورود/ثبت نام</button>
     </div>
+    <!-- start contact us -->
+    <div class="container containerContact parent-class" id="">
+      <div class="row ">
+        <div class="col-12">
+          <!-- <div class="icon-call call d-flex  justify-content-center align-items-center">
+            <i class="fa-solid fa-phone"></i>
+          </div>   -->
+          <div class="card-call d-flex justify-content-center"> 
+            <button type="button" class="btn-close m-close" id="btn-close" aria-label="Close"></button> 
+            <div class="contact d-flex justify-content-center flex-column" >
+              <h3 class="num-call p-2 d-flex justify-content-center">
+                <a class="" href="http://">09173216548</a>
+              </h3>
+              <h3 class="num-call p-2 d-flex justify-content-center">
+                <a class="" href="http://">07138547845</a>
+              </h3>
+              <span class="d-flex justify-content-center">
+                <a class="show-contact" href="http://"></a>
+              </span>
+             <div class="btn-contacts">
+              <button class="btn btn-success mt-5 btn-contact-js " >
+                <i class="fa-brands fa-instagram" id="btn-insta" href=""></i>
+              </button>
+              
+              <button class="btn btn-success mt-5 btn-contact-js " >
+                <i class="fa-brands fa-telegram" id="btn-tele" href=""></i>
+              </button>
+              
+              <button class="btn btn-success mt-5 btn-contact-js " >
+                <i class="fa-brands fa-whatsapp" id="btn-whats" href=""></i>
+              </button>
+    
+              <button class="btn btn-success mt-5 btn-contact-js" >
+                <i class="fa-solid fa-comment-sms" id="btn-sms" href=""></i>
+              </button>
+             </div>
+            </div>           
+            </div>
+        </div>
+      </div>
+    </div>  
+  <!-- end contact us -->
     <header class="container-fluid mb-0">
       <div class="row">
         <div class="col-12 p-0">
@@ -114,11 +156,11 @@
       </div>
     </header>
     <!-- start Register and log in form -->
-     <div class="container-fluid container-login">
+     <div class="container-fluid container-login parent-class">
       <div class="container d-flex " >
         <div class="row container-form display-form" id="formRegister-js">
           <div class="col-md-6 col-lg-6 col-12">
-            <button type="button" class="btn-close m-close" id="btn-close" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-login m-close" id="" aria-label="Close"></button>
             <form class=" my-form register d-flex flex-column ">
               <img src="./assets/img/logo.png.png" class="logo-register img-fluid">
               
@@ -186,7 +228,6 @@
        <!-- end forgot pass -->  
      </div>
      <!-- end Register and log in form -->
-
     <!-- end navBar -->
 
     <!-- start parallax -->
@@ -343,7 +384,7 @@
             <div class="container">
                 <div class="row">                     
                     <!-- Image Column -->
-                  <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                  <div class="content-column col-lg-6 col-md-12 col-sm-12 mt-3 mt-lg-5">
                       <div class="inner-column">
                           <div class="sec-title">
                               <span class="title">درباره ما : باشگاه خشایار</span>
@@ -373,16 +414,16 @@
                             و ...
                           </div>
                         
-                          <div class="btn-box">
-                              <a href="#" class="theme-btn btn-style-one">تماس با ما</a>
-                          </div>
+                          <button class="btn btn-primary btn-box call">
+                              <a href="#" class="theme-btn">تماس با ما</a>
+                          </button>
                       </div>
                   </div>
-                  <div class="image-column col-lg-6 col-md-12 col-sm-12 mt-3 mt-lg-5">
+                  <div class="image-column col-lg-6 col-md-12 col-sm-12 mt-5 align-content-center">
                     <div class="inner-column wow fadeInLeft">
                       <div class="author-desc">
-                        <h2>Rahul Kumar Yadav</h2>
-                        <span>Web Developer</span>
+                        <h2>علیرضا فردوسی</h2>
+                        <span>مدیر و مربی باشگاه</span>
                       </div>
                         <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images">
                           <img title="Rahul Kumar Yadav" src="./assets/img/about.jpeg" alt="">
@@ -391,29 +432,57 @@
                     </div>
                 </div>
                 </div>
-               <div class="sec-title">
-                                <span class="title">Our Future Goal</span>
-                                <h2>We want to lead in innovation & Technology</h2>
-                            </div>
-              <div class="text">
-                    We works on UI/UX and functionality as well so that a plugins comes with proper stucture & stunning looks which suits to your web app & website.
-                  </div>
-                   <div class="text">
-                    We take a small toolkit here and ride it well so that it is fit for your use. One who performs well and looks even better.
-                  </div>
-                   <div class="text">                
-                    Here we are trying to give you all kinds of technical content, whether it is related to designing or functionality. We are creating content on a lot of languages and will continue to make it free of cost even if you use it without any problem. Which is a very important thing.
-                  </div>
-                   <div class="text">
-                    Here you can also share the content you create, if our technical team likes it, then we will also share it on our blog.
-                  </div>
-                   <div class="text">
-                    
-                  n the end, I would say keep visiting our website and enjoy the quality content.
-                  </div>
+                              
             </div>
            </section>
-        </div>
+                     
+           </div>
+          <div class="row bg-whySec">
+            <div class="col-12">
+              <section class="pt-5 pt-md-0">
+                <div class="sec-title">
+                  <h2>چرا باید ما رو انتخاب کنید؟</h2>
+              </div>
+                <div class="text">
+                چرا [نام باشگاه]؟<br />
+                
+                محیطی دوستانه و انگیزه‌بخش: ما به شما کمک می‌کنیم تا در یک فضای شاد و پر انرژی به اهداف‌تان برسید.<br />
+                برنامه‌های متنوع و شخصی‌سازی شده: برنامه‌های تمرینی ما متناسب با نیازهای فردی شما طراحی می‌شود.<br />
+                تجهیزات پیشرفته: از جدیدترین دستگاه‌ها و امکانات ورزشی استفاده کنید.<br />
+                تیم حرفه‌ای و با تجربه: از مشاوره و راهنمایی مربیان متخصص بهره‌مند شوید.<br />
+                هدف ما:<br />
+                
+                هدف ما این است که به شما کمک کنیم تا به یک سبک زندگی سالم و فعال دست پیدا کنید. ما می‌خواهیم که ورزش کردن برای شما لذت‌بخش باشد و به بخشی جدایی‌ناپذیر از زندگی‌تان تبدیل شود.<br />
+                
+                دعوت به همکاری:<br />
+                
+                به شما دعوت می‌کنیم تا به خانواده بزرگ [نام باشگاه] بپیوندید و از مزایای عضویت در باشگاه ما بهره‌مند شوید. برای کسب اطلاعات بیشتر و ثبت‌نام، با ما تماس بگیرید.<br />
+                
+                تماس با ما:<br />
+                
+                [شماره تلفن]<br />
+                [آدرس ایمیل]<br />
+                [آدرس وب‌سایت]<br />
+                
+                [لوگوی باشگاه]<br />
+                
+                نکات مهم:<br />
+                
+                شخصی‌سازی: این متن را با توجه به ویژگی‌های خاص باشگاه خود، مانند تخصص‌های مربیان، امکانات ویژه و جوایز باشگاه، شخصی‌سازی کنید.<br />
+                کلمات کلیدی: از کلمات کلیدی مرتبط با باشگاه‌تان (مانند بدنسازی، تناسب اندام، باشگاه ورزشی و ...) در متن استفاده کنید تا در موتورهای جستجو بهتر دیده شوید.<br />
+                دعوت به عمل: در انتهای متن، از مخاطبان بخواهید که با شما تماس بگیرند یا در باشگاه ثبت‌نام کنند.<br />
+                تصاویر با کیفیت: از تصاویر با کیفیت بالا از باشگاه، تجهیزات و مربیان استفاده کنید تا جذابیت متن را افزایش دهید.<br />
+                موارد دیگری که می‌توانید به متن اضافه کنید:<br />
+                
+                معرفی تیم مربیان: با ذکر نام و تخصص هر مربی، به مخاطبان کمک کنید تا با تیم شما آشنا شوند.<br />
+                معرفی برنامه‌های ویژه: اگر برنامه‌های خاصی مانند اردوهای ورزشی یا مسابقات برگزار می‌کنید، به آن‌ها اشاره کنید.<br />
+                تضمین رضایت مشتری: به مشتریان خود اطمینان دهید که از عضویت در باشگاه شما راضی خواهند بود.<br />
+                تخفیف‌ها و پیشنهادات ویژه: برای جذب مشتریان جدید، می‌توانید از تخفیف‌ها و پیشنهادات ویژه استفاده کنید.<br />
+                با استفاده از این نکات و الگوی پیشنهادی، می‌توانید یک صفحه "درباره ما" جذاب و آموزنده برای باشگاه خود ایجاد کنید.<br />
+                </div>
+               </section>
+            </div>
+          </div>
       </div>
      </div>
     
@@ -450,9 +519,10 @@
                 <li><a class="dropdown-item " href="#">
                   <span class="material-symbols-outlined">
                   </span>نحوه عضویت</a></li>
-                <li><a class="dropdown-item " href="#">
+                <li><a class="dropdown-item call" href="#">
                   <span class="material-symbols-outlined">
-                  </span>تماس با مشاور </a></li>
+                  </span>تماس با مشاور 
+                </a></li>
                
                 </ul>
              </div>
@@ -503,6 +573,7 @@
     <!-- end footer -->
 
 
+
      
 
 
@@ -511,7 +582,8 @@
 
 
      <script src="assets/js/script.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c8c4cb26b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
