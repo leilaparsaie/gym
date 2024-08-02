@@ -128,11 +128,12 @@ optionBtns.forEach(btn => {
 
 // login form
 
-const RegisterJs = document.querySelector('#Register-js'); // Assuming correct ID
+const RegisterJs = document.querySelectorAll('#Register-js'); // Assuming correct ID
 const containerLogin = document.querySelector('.container-login'); // Assuming correct class
 
-RegisterJs.addEventListener('click', () => {
-  // Check if the animation is already running to prevent stacking
+RegisterJs.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+     // Check if the animation is already running to prevent stacking
   if (!containerLogin.classList.contains('animated')) {
     containerLogin.classList.add('animated'); // Add animated class
     setTimeout(() => {
@@ -140,7 +141,17 @@ RegisterJs.addEventListener('click', () => {
       containerLogin.classList.remove('animated');
     }, 0); // Set a small delay to ensure class is applied first
   }
+  });
+ 
 });
+
+ // login-fixed
+//  const loginFixed = document.querySelector('.login-fixed');
+//  loginFixed.addEventListener('click', () => {
+//    containerLogin.style.transform = 'translateY(0px)'; 
+
+//  });
+ // end login-fixed
 
   // link to login and register
     const loginbtn = document.querySelector('#login');
@@ -270,13 +281,7 @@ RegisterJs.addEventListener('click', () => {
       });
 
 
-    // login-fixed
-    const loginFixed = document.querySelector('.login-fixed');
-    loginFixed.addEventListener('click', () => {
-      containerLogin.style.transform = 'translateY(0px)'; 
-
-    });
-    // end login-fixed
+   
 
     // start contact form
  
