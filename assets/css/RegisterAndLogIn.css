@@ -1,139 +1,156 @@
-
-.container-login{
-    position: absolute;
-    background-color:rgba(231, 231, 231, 0.316);
-    width:100%;
-    height:100vh;
-    top: 0;
-    z-index:1200;
-    transform: translateY(-1000px);
-    transition: transform 1s ease-in-out; /* Smooth transition */
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 830px!important;
   
+  }
+  .register{
+      width: 100%;
+  }
+}
+.modal-content {
+  height:520px!important;
+
+}
+.container-login{
+  position: absolute;
+  background-color:rgba(231, 231, 231, 0.316);
+  width:100%;
+  height:100vh;
+  top: 0;
+  z-index:1200;
+  /* transform: translateY(-1000px); */
+  transition: transform 1s ease-in-out; /* Smooth transition */
+
 }
 
 .container-login.animated {
-  transform: translateY(0); /* Animate to visible position */
+transform: translateY(0); /* Animate to visible position */
 }
 
 .container-form{
-  position: relative;
-  width: 1000px;
-  height: 500px;  
-  margin: 0 auto;
-  top: 20%!important;
-  background-color:rgb(255, 255, 255);
-  transform: translateY(20%);
+position: relative;
+width: 1000px;
+height: 500px;  
+margin: 0 auto;
+top: 20%!important;
+background-color:rgb(255, 255, 255);
+transform: translateY(20%);
 }
 .register{
-   height: 100%;
+ height: 100%;
 }
 .logo-register{
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
 }
 .title-form{
-    position: relative;
-    margin: 0 auto;
-    width:150px;
-    border-bottom: 4px solid rgb(225, 225, 225) ;
-    padding-bottom: 0px;
+  position: relative;
+  margin: 0 auto;
+  width:150px;
+  border-bottom: 4px solid rgb(225, 225, 225) ;
+  padding-bottom: 0px;
 }
 .title-form span{
-    margin-left: 40px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    cursor: pointer;
+  margin-left: 40px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  cursor: pointer;
 
 }
 .borderbottom {
-    width: 70px;
-    height: 3px;
-    position: absolute;
-    top:35px;
-    transform: translateX(40px);
-    background-color: black;
-    transition: transform 1s ease-in-out; /* Smooth transition */
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  top:35px;
+  transform: translateX(40px);
+  background-color: black;
+  transition: transform 1s ease-in-out; /* Smooth transition */
 
 }
 .form{
-    max-width: 350px;
-    margin: 0 auto;
-    position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 }
 .form input{
-    border: none;
-    background-color:rgb(248, 248, 248);
-    margin-bottom: 20px;
-    padding: 8px;
-    font-size: 14px;
-    outline: none;
-    width: 100%;
+  border: none;
+  background-color:rgb(248, 248, 248);
+  margin-bottom: 20px;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
 }
 .form input:valid {
-    border-color: green;
-  }
-  
- .form input:invalid {
-    border-color: red;
-  }
-  
-.btn-login{
-    width: 100%;
-    outline: none!important;
-    background-color:rgb(186, 186, 186);
-    cursor: pointer!important;
-    color:rgb(242, 242, 242);
+  border-color: green;
 }
-.btnRegister{
-    position: absolute;
-    width: 100%;
-    background-color:rgba(3, 194, 3, 0.919);
-    display: block;
-    cursor: pointer!important;
-    color:rgb(242, 242, 242);
+
+.form input:invalid {
+  border-color: red;
+}
+
+.btn-login {
+  width: 100%;
+  outline: none !important;
+  background-color: rgb(186, 186, 186);
+  cursor: pointer !important;
+  color: rgb(242, 242, 242);
+  margin: 15px 0px;
+}
+.btnRegister {
+  position: absolute;
+  width: 89%;
+  background-color: rgba(3, 194, 3, 0.919);
+  display: block;
+  cursor: pointer !important;
+  color: rgb(242, 242, 242);
 }
 .forgotPass{
-    text-decoration: none;
-    font-size: 12px;
+  text-decoration: none;
+  font-size: 12px;
 }
 .img-form-logIn{
-    width: 100%;
-    height: 300px; 
+  width: 100%;
+  height: 300px; 
 }
 .error,.error-pass{
-    color: red;
-    font-size: 12px;
-    font-weight: bold;
-  }
- .forgotPass-form{
-    position: absolute;
-    margin: 0 auto;
-    top: 20%!important;
-    background-color:rgb(255, 255, 255);
-    /* transform: translateY(20%); */
- }
- #iconEye{
-    position: absolute;
-    left: 10px!important;
-    top: 62px!important;
-    padding: 5px!important;
-    transition: all 0.5s ease-in-out;
-    font-size: 12px!important;
- }
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+.forgotPass-form{
+  position: absolute;
+  margin: 0 auto;
+  top: 20%!important;
+  background-color:rgb(255, 255, 255);
+  /* transform: translateY(20%); */
+}
+#iconEye {
+  position: absolute;
+  left: 10px !important;
+  top: 62px !important;
+  padding: 10px 22px !important;
+  transition: all 0.5s ease-in-out;
+  font-size: 12px !important;
+}
 /* start forgotForm */
- #forgotForm{
-    display:none;
-    margin-top: 10%;
-    background-color:rgba(233, 233, 233, 0.836);
+#forgotForm{
+  width: 100%;
+}
 
- }
- .form-group input{
-    color:rgb(36, 36, 36);
- }
+.form-group input{
+  color:rgb(36, 36, 36);
+}
 
 /* end forgotForm */
 /* btn close */
 .m-close{
-    margin: 10px;
+  margin: 10px;
+}
+.btn-close {
+  top: 8px!important;
+  right: 10px!important;
+  position: absolute!important;
 }

@@ -1,43 +1,24 @@
 .containerContact{
   width: 300px !important;
-   position:absolute !important;
-  transform: translateY(-1000px);
-  transition: all 1s ease-in-out;
+  position:absolute !important;
   z-index: 1400;
 }
-
-.card-call{
-  position: absolute;
-  width: 100%;
-  height: 350px !important;
-  border:1px solid rgb(208, 208, 208);
-  box-shadow:10px 10px 10px 10px rgba(20, 65, 4, 0.251);
-  background-color:rgb(184, 238, 189);
-  border-radius:25px;
-  z-index: 11111;
+.btns-contact button{
+ margin-left: 20px;
 }
 
-.icon-call{
-  width: 90px;
-  height: 90px;
-  border-radius:50%;
-  background-color:rgba(3, 151, 3, 0.716);
-  color:white;
-  font-size: 30px;
-  border:1px solid rgb(7, 152, 4);
-  position: absolute;
-  z-index: 1300;
-  top: 80%;
-  left: 20%;
-
-}
 .btn-contact-js i{
   font-size: 20px;
 }
-.num-call a{
-  box-shadow:10px 10px 10px rgba(255, 255, 255, 0.362);
-}
+
 .show-contact{
   padding: 20px;
   font-size: 20px;
+}
+.modal-body{
+  background-color:rgba(123, 167, 129, 0.771);
+}
+.modal-body a{
+  text-decoration: none !important;
+  color:rgb(44, 69, 44);
 }

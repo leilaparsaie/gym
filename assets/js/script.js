@@ -1,4 +1,3 @@
-  
 
 // start menu
     const menu = document.querySelector(".menu");
@@ -31,19 +30,19 @@
 
 // start parallax
 window.addEventListener('scroll', function() {
-  var scrollTop = window.scrollY; // موقعیت فعلی اسکرول عمودی را بدست آورید
+  var scrollTop = window.scrollY; 
   
-  var elementWidth = document.getElementById('myElement').offsetWidth; // عرض عنصر را بدست آورید
-  var newLeft = scrollTop * (elementWidth / window.innerHeight) * 1; // موقعیت جدید عنصر را محاسبه کنید
-  document.getElementById('myElement').style.left = newLeft + 'px'; // موقعیت جدید عنصر را تنظیم کنید
+  var elementWidth = document.getElementById('myElement').offsetWidth; 
+  var newLeft = scrollTop * (elementWidth / window.innerHeight) * 1;
+  document.getElementById('myElement').style.left = newLeft + 'px';
 
-  var elementHeight = document.getElementById('myElement1').offsetHeight; // عرض عنصر را بدست آورید
-  var newTop = scrollTop * (elementHeight / window.innerHeight) * 1; // موقعیت جدید عنصر را محاسبه کنید
-  document.getElementById('myElement1').style.left = newTop + 'px'; // موقعیت جدید عنصر را تنظیم کنید
+  var elementHeight = document.getElementById('myElement1').offsetHeight; 
+  var newTop = scrollTop * (elementHeight / window.innerHeight) * 1; 
+  document.getElementById('myElement1').style.left = newTop + 'px';
 
-  var element2Height = document.getElementById('myElement2').offsetHeight; // عرض عنصر را بدست آورید
-  var newTopelm2 = scrollTop * (element2Height / window.innerHeight) * 1; // موقعیت جدید عنصر را محاسبه کنید
-  document.getElementById('myElement2').style.right = newTopelm2 + 'px'; // موقعیت جدید عنصر را تنظیم کنید
+  var element2Height = document.getElementById('myElement2').offsetHeight; 
+  var newTopelm2 = scrollTop * (element2Height / window.innerHeight) * 1; 
+  document.getElementById('myElement2').style.right = newTopelm2 + 'px'; 
 
 });
 
@@ -126,24 +125,7 @@ optionBtns.forEach(btn => {
 // end showcase
 
 
-// login form
 
-const RegisterJs = document.querySelectorAll('#Register-js'); // Assuming correct ID
-const containerLogin = document.querySelector('.container-login'); // Assuming correct class
-
-RegisterJs.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-     // Check if the animation is already running to prevent stacking
-  if (!containerLogin.classList.contains('animated')) {
-    containerLogin.classList.add('animated'); // Add animated class
-    setTimeout(() => {
-      containerLogin.style.transform = 'translateY(0px)'; // Apply transform after class addition
-      containerLogin.classList.remove('animated');
-    }, 0); // Set a small delay to ensure class is applied first
-  }
-  });
- 
-});
 
  // login-fixed
 //  const loginFixed = document.querySelector('.login-fixed');
@@ -153,193 +135,4 @@ RegisterJs.forEach(btn => {
 //  });
  // end login-fixed
 
-  // link to login and register
-    const loginbtn = document.querySelector('#login');
-    const registerbtn = document.querySelector('#register');
-    const borderbottom = document.querySelector('.borderbottom');
-    const loginForm = document.querySelector('.login-form');
-    const registerForm = document.querySelector('.register-form');
-    const contantForm = document.querySelector('.form');
-
-
-    registerbtn.addEventListener('click', () => {
-      borderbottom.style.transform = 'translateX(40px)';
-      contantForm.innerHTML=`<div>
-              <input type="text" placeholder="نام کاربری :">        
-              <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="کلمه عبور :">
-              <input type="password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder=" تکرار کلمه عبور :">
-              <p class="error p-1"></p>
-              <button type="register" onclick="" class="btn btnRegister">ثبت نام</button>
-            </div>`
-  
-    });
-      // confirm_password
-      const passwordInput = document.getElementById('password');
-      const confirmPasswordInput = document.getElementById('confirm_password');
-      const errorMessage = document.querySelector('.error');
-      const btnRegister = document.querySelector('.btnRegister');
-
-      btnRegister.addEventListener('click', () => {
-        if (confirmPasswordInput.value !== passwordInput.value) {
-          errorMessage.textContent = 'رمزعبور مطابقت ندارند';
-        } else {
-          errorMessage.textContent = '';
-        }
-  });
-
-    loginbtn.addEventListener('click', () => {
-      borderbottom.style.transform = 'translateX(-40px)';
-      contantForm.innerHTML=`<div class="password-field">
-              <input type="text" placeholder="نام کاربری :">        
-              <input type="password" class="active" id="passwordLogin" placeholder="کلمه عبور :">
-              <i id="iconEye" class="fa fa-eye-slash"></i>
-              <p class="error-pass p-1"></p>
-              <a href="#" id="forgot-js" class="forgotPass">فراموشی رمز عبور</a>
-              <button type="Login" class="btn btn-login btn-login-form">ورود</button>
-            </div>`
-       // validatePassword
-    
-            const passwordLogin = document.getElementById('passwordLogin');
-            const enteredPassword = passwordInput.value.toString();
-          
-            // backend*****
-            const correctPassword = "123456";
-          
-            // عنصر پیام خطا
-            const errorPassElement = document.querySelector('.error-pass');
-            const btnLogin = document.querySelector('.btn-login-form');
-          
-            btnLogin.addEventListener('click', () => {
-            if (enteredPassword !== correctPassword) {
-                errorPassElement.textContent = 'رمز عبور صحیح نیست';
-                // console.log("error");
-                // errorPassElement.style.display = 'block';
-            } else {
-              console.log("hello");
-                // اگر رمز عبور صحیح بود، عملیات ورود را انجام دهید
-                // ... کد مربوط به ورود موفق
-            }
-          });
-          
-          // end validatePassword
-
-        //start iconEye
-            const icon = document.getElementById('iconEye');
-
-            icon.addEventListener('click', function () {
-
-            if(passwordLogin.className == 'active') {
-                passwordLogin.setAttribute('type', 'text');
-                icon.className = 'fa fa-eye';
-              passwordLogin.className = '';
-
-            } else {
-                passwordLogin.setAttribute('type', 'password');
-                icon.className = 'fa fa-eye-slash';
-              passwordLogin.className = 'active';
-            }
-        
-            });
-         // end iconEye
-
-        //  start forgotForm
-        const forgotForm = document.getElementById('forgot-js');
-        const forgotFormEl = document.getElementById('forgotForm'); 
-        const formRegister = document.getElementById('formRegister-js'); 
-
-        forgotForm.addEventListener('click', function () {
-          forgotFormEl.style.display = 'block';
-          formRegister.style.display = 'none';
-        });
-        // end forgotForm
-
-    });
-
-    // btn close
-     
-    const btnClose = document.querySelector('.btn-close-login');
-    const formClose = document.querySelector('.container-login');
-    const forgotFormEl = document.getElementById('forgotForm'); 
-    const formRegister = document.getElementById('formRegister-js'); 
-
-    // 
-    btnClose.addEventListener('click', () => {
-          formClose.style.transform = 'translateY(-1000px)'; // یا هر روش دیگری برای مخفی کردن عنصر
-          forgotFormEl.style.display = 'none';
-          formRegister.style.display = 'flex';
-     
-        });
-
-     const closeButton = document.querySelectorAll('#btn-close');
-      closeButton.forEach(button => {
-          button.addEventListener('click', () => {
-              // پیدا کردن عنصر والد نزدیک‌ترین با استفاده از کلاس
-              const parentElement = button.closest('.parent-class'); // جایگزین .parent-class با کلاس مورد نظر خود کنید
-
-              parentElement.style.transform = 'translateY(-1000px)' // برای مخفی کردن عنصر
-          });
-      });
-
-
-   
-
-    // start contact form
  
-    // const toggleContact = document.querySelector('.toggle-contact'); 
-    // const containerContact = document.querySelector('.containerContact');
-    // const closeContact = document.querySelector('.close-contact'); 
-
-    // toggleContact.addEventListener('click', () =>{
-    //   containerContact.classList.add("active-contact");
-
-    // });
-    // closeContact.addEventListener('click', () =>{
-    //   containerContact.classList.remove("active-contact");
-    // });
-
-    const showContact = document.querySelector('.show-contact');
-    const btnContactjs = document.querySelectorAll('.btn-contact-js');
-
-    btnContactjs.forEach(btn => {
-      btn.addEventListener('click', (event) => {
-        // alert('Hello, world!');
-          const optionId = event.target.id;
-          showContact.innerHTML = '';
-          switch (optionId) {
-              case 'btn-insta':
-                  showContact.innerHTML = '@khashayar-gym';
-                  break;
-              case 'btn-tele':
-                  showContact.innerHTML = '@tel-khashayar_gym';
-                  break;
-              case 'btn-whats':
-                  showContact.innerHTML = '#09171223698';
-                  break; 
-              case 'btn-sms':
-                  showContact.innerHTML = '#09388547414';
-                  break;       
-            
-          }
-      });
-  });
-
-  const iconCalls = document.querySelectorAll('.call'); // توجه کنید که به جای singular به plural تغییر کرده است
-  const containerContact = document.querySelector('.containerContact');
-  
-  iconCalls.forEach(iconCall => { // با استفاده از forEach برای هر دکمه یک EventListener اضافه می کنیم
-      iconCall.addEventListener('click', () => {
-         
-          containerContact.style.transform = 'translateY(100px)';
-         
-      });
-  });
-//   document.addEventListener('click', (event) => {
-//     // بررسی اینکه آیا کلیک روی عنصر containerContact یا یکی از فرزندان آن نبوده است
-//     if (!event.target.closest('.containerContact')) {
-//         containerContact.style.transform = 'translateY(-1376px)'; // برگرداندن فرم به حالت اولیه
-//     }
-// });
-  
-    // end contact form
-
-   
