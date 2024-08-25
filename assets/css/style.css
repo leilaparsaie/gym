@@ -1,5 +1,5 @@
 @import url(../css/-footer-section-style.css);
-@import url(../css/heder.css);
+@import url(../css/header.css);
 @import url(../css/RegisterAndLogIn.css);
 @import url(../css/about.css);
 @import url(../css/contact\ us.css);
@@ -269,7 +269,10 @@ body{
 /* .scroll{
   overflow-x:hidden;
 } */
-
+ .show-case-h{
+  height: 650px;
+  margin-top: 100px !important;
+ }
  .showCase{ 
   width: 600px; 
   height: 180px;

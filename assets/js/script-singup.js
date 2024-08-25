@@ -22,7 +22,8 @@ const confirmPasswordInput = document.getElementById("confirm_password");
 const errorMessage = document.querySelector(".error");
 const btnRegister = document.querySelector(".btnRegister");
 
-btnRegister.addEventListener("click", () => {
+btnRegister.addEventListener("click", (event) => {
+  event.preventDefault();
   if (confirmPasswordInput.value !== passwordInput.value) {
     errorMessage.textContent = "رمزعبور مطابقت ندارند";
   } else {
@@ -50,7 +51,8 @@ loginbtn.addEventListener("click", () => {
   // backend*****
   const correctPassword = "123456";
 
-  btnLogin.addEventListener("click", () => {
+  btnLogin.addEventListener("click", (event) => {
+    event.preventDefault();
     const enteredPassword = passwordInput.value.toString();
 
     if (enteredPassword.trim() === "") {
@@ -65,7 +67,7 @@ loginbtn.addEventListener("click", () => {
         errorPassElement.textContent = "";
       }, 3000);
     } else {
-      console.log("hello");
+ 
       // اگر رمز عبور صحیح بود، عملیات ورود را انجام دهید
       // ... کد مربوط به ورود موفق
     }
@@ -82,7 +84,7 @@ loginbtn.addEventListener("click", () => {
       icon.className = "fa fa-eye";
       passwordLogin.className = "";
     } else {
-      passwordLogin.setAttribute("type", "password");
+      passwordLogin.setAttribute("type","password");
       icon.className = "fa fa-eye-slash";
       passwordLogin.className = "active";
     }

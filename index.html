@@ -44,16 +44,16 @@
                                      <a class="nav-link " aria-current="page" href="#">خانه</a>
                                       </li>
                                         <li class="li-body-humbergerMenu">
-                                        <a class="nav-link" href="#">گالری</a>
+                                        <a class="nav-link" href="#">ثبت نام دوره</a>
                                       </li>
-                                      <li class="li-body-humbergerMenu" data-bs-toggle="modal" data-bs-target="#contactUs">
-                                        <a class="nav-link " href="#" >تماس با ما</a>
+                                      <li class="li-body-humbergerMenu"  data-bs-dismiss="offcanvas" aria-label="Close" >
+                                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#contactUs" >تماس با ما</a>
                                       </li>
                                       <li class="li-body-humbergerMenu" data-bs-dismiss="offcanvas" aria-label="Close">
                                         <a class="nav-link" href="#about-us" >درباره ما</a>
                                       </li>
                                     </ul>
-                                    <img src="assets/img/bg-humbergerMenu.png" class="bg-humbegerMenu">
+                                    <!-- <img src="assets/img/bg-humbergerMenu.png" class="bg-humbegerMenu"> -->
                                   </div>
                                 </div>
                                 <!-- end humberger menu body  -->
@@ -65,7 +65,7 @@
                                 <a class="nav-link " aria-current="page" href="#">خانه</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">گالری</a>
+                                <a class="nav-link" href="#">ثبت نام دوره</a>
                               </li>
                               <li class="nav-item" data-bs-toggle="modal" data-bs-target="#contactUs">
                                 <a class="nav-link " href="#">تماس با ما</a>
@@ -157,7 +157,8 @@
                 </button>
               </div>
             </div>
-            <img src="assets/img/bg-img (1).jpg" class="img-heder img-fluid m-0 p-0">
+            <div class="parallax-header"></div>
+            <!-- <img src="assets/img/bg-img (1).jpg" class="img-heder img-fluid m-0 p-0"> -->
             <!-- <img src="assets/img/title-logo-.png" class="title-logo"> -->
           </figure>
         </div>
@@ -247,32 +248,12 @@
 
     <!-- end navBar -->
 
-    <!-- start parallax -->
-     
-    <div class="parallax" id="parallax">
-      <div class="container">
-        <div class="row h-300">
-          <div class="col-12 d-flex justify-content-center justify-content-lg-end align-items-center">
-            <div class="parallax-content" id="myElement">
-              <p class="p-4">
-                قهرمان زندگی خود باشید، نه قربانی 
-              </p>
-             </div>
-            <h3 class="element1" id="myElement1"></h3>
-            <h3 class="element2" id="myElement2"></h3>
-      
-          </div>
-        </div>
-      </div>
-    </div>
-     <!-- end parallax -->
-
-    <!--start show case section -->
-    <div class="container mt-3 mt-lg-5">
+        <!--start show case section -->
+    <div class="container mt-3 show-case-h">
       <div class="row">
               <div class="col-12 col-lg-12 d-flex justify-content-center">
                 <ul class="d-flex justify-content-around showCase pt-4 ">
-                  <li id="option1" class="option-btn list-inline  noFilter">
+                  <li id="option1" class="option-btn list-inline noFilter">
                       <img src="assets/img/gym3_pic3.png" href="#">
                       <p>دورههای ورزشی</p>
                   </li>
@@ -307,6 +288,26 @@
       </div>
     <!--end show case section -->
 
+    <!-- start parallax -->
+     
+    <div class="parallax" id="parallax">
+      <div class="container">
+        <div class="row h-300">
+          <div class="col-12 d-flex justify-content-center justify-content-lg-end align-items-center">
+            <div class="parallax-content" id="myElement">
+              <p class="p-4">
+                قهرمان زندگی خود باشید، نه قربانی 
+              </p>
+             </div>
+            <h3 class="element1" id="myElement1"></h3>
+            <h3 class="element2" id="myElement2"></h3>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- end parallax -->
+
     <!-- start section coach -->
     <div class="container-fluid bg-black d-flex justify-content-center  mt-3 mt-lg-5">
       <div class="container container-coach h">
@@ -338,7 +339,7 @@
                     </p>
                   </div>
                   <button class="btn btn-register" id="Register-js">
-                    ثبت نام 
+                   ثبت نام دوره
                   </button>
                 </div>
               </div>
@@ -369,7 +370,7 @@
                   </p>
                 </div>
                 <button class="btn btn-register" id="Register-js">
-                  ثبت نام 
+                 ثبت نام دوره
                 </button>
               </div>
              </div>
@@ -438,7 +439,7 @@
                       </div>
                   </div>
                   <div class="image-column col-lg-6 col-md-12 col-sm-12 mt-5 align-content-center">
-                    <div class="inner-column wow fadeInLeft">
+                    <div class="inner-column">
                       <div class="author-desc">
                         <h2>علیرضا فردوسی</h2>
                         <span>مدیر و مربی باشگاه</span>
