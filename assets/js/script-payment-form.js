@@ -48,7 +48,7 @@ function countBmi() {
   var h2 = document.createElement("h2");
 
   var t = document.createTextNode(result);
-  // var b = document.createTextNode("شاخص توده ی بدنی شما :  (BMI) ");
+  var b = document.createTextNode("شاخص توده ی بدنی شما :  (BMI) ");
   var r = document.createTextNode(parseFloat(bmi).toFixed(2));
 
   h2.appendChild(b);

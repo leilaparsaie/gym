@@ -1,75 +1,79 @@
-.modal-dialog-custom {
+.modal-dialog-custom{
   max-width: 650px !important;
 }
-.modal-content-custom {
-  background-color: #6c8e96;
+.modal-content-custom{
+   background-color: #6c8e96;
 }
-.Personal-information {
-  max-width: 450px;
+.Personal-information{
+   max-width: 450px;
   margin: 0 auto;
 }
-.modal-body-custom {
-  font-size: 16px;
-  color: rgb(238, 238, 238);
-  /* height: 300px; */
+.modal-body-custom{
+   font-size: 16px;
+   color: rgb(238, 238, 238);
+
 }
-.w-h-a input {
-  width: 18%;
-  border-radius: 5px;
+.w-h-a input{
+   width: 18%;
+   border-radius: 5px;
 }
 
-.pad-cus {
+.pad-cus{
   padding: 5px;
   margin: 5px;
 }
-.w-input {
-  width: 220px;
+.w-input{
+   width: 220px;
 }
-.btn-next {
-  color: rgb(238, 238, 238);
+.btn-next{
+   color: rgb(238, 238, 238);
 }
 
 /* form2 */
-.font-color {
-  color: rgb(17, 17, 17);
+.font-color{
+   color:rgb(17, 17, 17);
+
 }
-.form-course {
-  max-width: 500px;
-  font-size: 16px;
-  margin: 0 auto;
+.form-course{
+   max-width: 500px;
+   font-size: 16px;
+   margin: 0 auto;
 }
-.bmi {
-  width: 100%;
-  /* display: block; */
-  background-color: #eef4f7c1;
+.bmi{
+   width:100%;
+   /* display: block; */
+   background-color:#eef4f7c1;
 }
-.bmi h1,
-.bmi h2 {
-  font-size: 16px;
-  padding: 20px;
+.bmi h1,.bmi h2{
+   font-size: 16px;
+   padding:  20px;
 }
-.modal-content2-custom {
-  background-color: #c7dbcf;
+.modal-content2-custom{
+   background-color:#c7dbcf;
 }
-.modal-body2-custom {
-  font-size: 16px;
-  color: rgb(238, 238, 238);
-  height: 300px;
+.modal-body2-custom{
+   font-size: 16px;
+   color: rgb(238, 238, 238);
+   height: 300px;
 }
-.m-label {
-  margin-left: 10px;
+.m-label{
+   margin-left: 10px;
 }
-.final-price {
-  font-size: 18px;
-  margin: 20px auto;
+.final-price{
+   font-size: 18px;
+   margin: 20px auto;
 }
-#title-courses {
-  font-size: 16px;
-  background-color: #eef4f7c1;
+#title-courses{
+   font-size: 16px;
+   background-color:#eef4f7c1;
+
+}
+#courses{
+   max-width: 270px;
 }
 
 /* form3 */
 
-.modal-content3-custom {
-  background-color: #b8cea1b5;
+.modal-content3-custom{
+   background-color:#b8cea1b5;
 }
