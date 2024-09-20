@@ -450,19 +450,18 @@ height: 50px;
   font-weight: bold;
   padding-bottom: 50px;
 }
-.coach p{
-  
-}
+
 .btn-register{
   background-color:rgb(12, 190, 9);
-  width: 100px;
-  height: 40px;
-  font-size: 18px;
-  color:rgb(245, 245, 245);
+  width: 150px;
   bottom:10%;
   position: absolute;
   left: 20%;
   
+}
+.btn-register a{
+  color:rgb(238, 238, 238);
+  font-size: 16px;
 }
 .color-btn{
   color:black !important;;

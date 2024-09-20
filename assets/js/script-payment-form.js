@@ -7,7 +7,8 @@ var male = document.getElementById("male");
 var female = document.getElementById("female");
 var form = document.getElementById("form-p-info");
 
-function validateForm() {
+
+jsNext.addEventListener("click", function validateForm() {
   if (
     age.value == "" ||
     height.value == "" ||
@@ -19,8 +20,7 @@ function validateForm() {
   } else {
     countBmi();
   }
-}
-jsNext.addEventListener("click", validateForm);
+});
 
 function countBmi() {
   var p = [age.value, height.value, weight.value];
@@ -62,9 +62,23 @@ function countBmi() {
 }
 jsNext.addEventListener("click", countBmi);
 
+// validation name
+
+function validateInput(input) {
+  const allowedCharsRegex = /^[^\d]+$/;
+
+  if (!allowedCharsRegex.test(input.value)) {
+    input.value = input.value.replace(/\d/g, '');
+        alert('لطفا اطلاعات خود را بدرستی وارد کنید');
+  }
+}
+
+
+
 //  price
 
-function updatePrice() {
+  
+function updatePrice() { 
   const selectedOption = document.getElementById("courses");
   const selectedValue = selectedOption.value;
   document.getElementById("price").textContent = selectedValue;

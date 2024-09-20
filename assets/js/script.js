@@ -26,6 +26,10 @@
       const menuLinkActive = menu.querySelector("li.active");
       doCalculations(menuLinkActive);
 });
+
+    function openRCourse(){
+      window.open("rCourse.html", '_self');
+    }
 // end menu
 
 // start parallax

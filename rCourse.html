@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous"></head>
+    <link href="https://fonts.cdnfonts.com/css/iranyekan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./assets/css/payment form.css">
+
+    <body font-family="">
+
+         <!-- start reg course -->
+        
+    <!-- start Personal form -->
+      <div 
+      class="modal fade "
+      id="courseModalToggle"
+      aria-hidden="true"
+      aria-labelledby="courseModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-custom">
+        <div class="modal-content modal-content-custom">
+          <div class="modal-header ">
+            <h1 class="modal-title fs-5 pad-cus" id="courseModalToggleLabel">
+              اطلاعات شخصی
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body modal-body-custom Personal-information d-flex justify-content-center"
+          >
+            <form class="w-100 d-flex flex-column" id="form-p-info">
+              <div class="p-3 d-flex justify-content-between">
+                <label for="firstName" class="">نام :</label>
+                <input
+                  type="text"
+                  class="w-input border-0 p-1"
+                  id="firstName"
+                  oninput="validateInput(this)"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="p-3 d-flex justify-content-between">
+                <label for="lastName" class="">نام خانوادگی :</label>
+                <input
+                  type="text"
+                  class="w-input border-0 p-1"
+                  id="lastName"
+                  oninput="validateInput(this)"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="p-3 gender">
+                <p1 for="" class="">جنسیت :</p1>
+                <label for="female" class="pad-cus">زن :</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  class="border-0"
+                  id="female"
+                  required
+                />
+                <label for="male" class="pad-cus">مرد :</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  class="border-0"
+                  id="male"
+                  required
+                />
+              </div>
+
+              <div class="w-h-a p-3">
+                <label for="weight" class="">وزن :</label>
+                <input
+                  type="number"
+                  class="pad-cus"
+                  name="weight"
+                  id="weight"
+                  required
+                />
+
+                <label for="height">قد :</label>
+                <input
+                  type="number"
+                  class="pad-cus"
+                  name="height"
+                  id="height"
+                  required
+                />
+
+                <label for="age">سن :</label>
+                <input
+                  type="number"
+                  class="pad-cus"
+                  name="age"
+                  id="age"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-next"
+              id="js-next"
+              onclick=""
+              data-bs-target="#courseModalToggle2"
+              data-bs-toggle="modal"
+            >
+              بعدی
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Personal form -->
+
+    <!-- start course -->
+    <div
+      class="modal fade"
+      id="courseModalToggle2"
+      aria-hidden="true"
+      aria-labelledby="courseModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-custom">
+        <div class="modal-content modal-content2-custom">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 pad-cus" id="courseModalToggleLabel2">
+              انتخاب دوره
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body modal-body2-custom">
+            <form class="form-course font-color d-flex flex-column ">
+              <div
+                class="bmi pad-cus font-color d-flex justify-content-center"
+                id="bmi"
+              ></div>
+              <div class=" mt-5 d-flex justify-content-center ">
+                <label class="m-label" for="courses">انتخاب دوره:</label>
+                <select class="" id="courses" onchange="updatePrice()">
+                  <option value="یک گزینه را انتخاب کنید">
+                    لطفا یک گزینه را انتخاب کنید
+                  </option>
+                  <option class="fitness" value="950000">
+                    فیتنس (روزهای زوج / ساعت 12 الی 20) ۹۵۰ هزار تومان
+                  </option>
+                  <option class="bodybuilding" value="120000">
+                    بدنسازی (هر روز هفته ) ۱۲۰۰ هزار تومان
+                  </option>
+                  <option class="bodybuilding" value="650000">
+                    بدنسازی (۱۲ جلسه در هفته) ۶۵۰ هزار تومان
+                  </option>
+                  <option class="yoga" value="950000">
+                    یوگا (روزهای فرد / ساعت 8 الی 20) ۹۵۰ هزار تومان
+                  </option>
+                </select>
+              </div>
+
+              <p class="final-price">
+                قیمت نهایی: <span class="font-color" id="price"></span>
+              </p>
+
+              <p  id="title-courses"></p>
+
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <button class="btn" >
+              <a class="" href="paymentPage.html">پرداخت</a>
+            </button>
+
+          <button
+          class="btn"
+          data-bs-target="#courseModalToggle"
+          data-bs-toggle="modal"
+        >
+          قبلی
+        </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- end course -->
+
+  <!-- end reg course -->
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="assets/js/script-payment-form.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/2c8c4cb26b.js" crossorigin="anonymous"></script>
+   </body>
+   </html>    
