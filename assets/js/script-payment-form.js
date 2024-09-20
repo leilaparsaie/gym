@@ -6,21 +6,27 @@ var age = document.getElementById("age");
 var male = document.getElementById("male");
 var female = document.getElementById("female");
 var form = document.getElementById("form-p-info");
+var form2 = document.getElementById("form2");
 
+function validateForm() {
 
-jsNext.addEventListener("click", function validateForm() {
   if (
-    age.value == "" ||
-    height.value == "" ||
-    weight.value == "" ||
-    (male.checked == false && female.checked == false)
+      age.value === "" ||
+      height.value === "" ||
+      weight.value === "" ||
+      (male.checked === false && female.checked === false)
   ) {
-    alert("لطفا اطلاعات خود را وارد کنید!");
-    jsNext.removeEventListener("click", countBmi);
+      alert("لطفا اطلاعات خود را وارد کنید!");
+      jsNext.removeEventListener("click", countBmi);
   } else {
-    countBmi();
+      countBmi();
+      console.log('ooooooffffff')
+      form.classList.add("hidden");
+      form2.classList.add("show");
   }
-});
+}
+
+jsNext.addEventListener("click", validateForm);
 
 function countBmi() {
   var p = [age.value, height.value, weight.value];
@@ -29,7 +35,7 @@ function countBmi() {
   } else if (female.checked) {
     p.push("female");
   }
-  form.reset();
+  // form.reset();
   var bmi = Number(p[2]) / (((Number(p[1]) / 100) * Number(p[1])) / 100);
 
   var result = "";
@@ -86,3 +92,4 @@ function updatePrice() {
     selectedOption.options[selectedOption.selectedIndex].textContent
   } `;
 }
+
